@@ -1,0 +1,141 @@
+1. To Login
+
+from selenium import webdriver
+from selenium.common import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
+# driver = webdriver.Chrome(ChromeDriverManager().install())
+def launch_browser():
+   driver = webdriver.Chrome(executable_path="C:/chromedriver.exe")
+   driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+   time.sleep(15)
+
+   driver.find_element(By.NAME, "username").send_keys("Admin")
+   driver.find_element(By.NAME, "password").send_keys("admin123")
+   driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("Admin")
+   return driver
+
+mydriver = launch_browser()
+
+
+2. To an invalid login
+
+from selenium import webdriver
+from selenium.common import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
+# driver = webdriver.Chrome(ChromeDriverManager().install())
+def launch_browser():
+   driver = webdriver.Chrome(executable_path="C:/chromedriver.exe")
+   driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+   time.sleep(15)
+
+   driver.find_element(By.NAME, "username").send_keys("Sri")
+   driver.find_element(By.NAME, "password").send_keys("admin123")
+   driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("Sri")
+   return driver
+
+mydriver = launch_browser()
+
+
+3. Add a new employee in the PIM module.
+
+from selenium import webdriver
+from selenium import select
+from selenium.common import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
+# driver = webdriver.Chrome(ChromeDriverManager().install())
+def launch_browser():
+   driver = webdriver.Chrome(executable_path="C:/chromedriver.exe")
+   driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+   time.sleep(15)
+
+   driver.find_element(By.NAME, "username").send_keys("Admin")
+   driver.find_element(By.NAME, "password").send_keys("admin123")
+   driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("Admin")
+   driver.find_element(By.NAME, "firstname").send_keys("SSSS")
+   driver.find_element(By.NAME, "middlename").send_keys("Flower")
+   driver.find_element(By.NAME, "lastname").send_keys("S")
+ driver.find_element(By.XPATH, "//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input[@employee Id]").send_keys("12345")
+   return driver
+    driver.find_element(By.LINK_TEXT, "Save").click()
+   
+
+mydriver = launch_browser()
+
+
+4. Edit an exiting employee in the PIM module.
+
+from selenium import webdriver
+from selenium import select
+from selenium.common import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
+# driver = webdriver.Chrome(ChromeDriverManager().install())
+def launch_browser():
+   driver = webdriver.Chrome(executable_path="C:/chromedriver.exe")
+   driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+   time.sleep(15)
+
+   driver.find_element(By.NAME, "username").send_keys("Admin")
+   driver.find_element(By.NAME, "password").send_keys("admin123")
+   driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("Admin")
+   driver.find_element(By.NAME, "firstname").send_keys("SSSS")
+   driver.find_element(By.NAME, "middlename").send_keys("Flower")
+   driver.find_element(By.NAME, "lastname").send_keys("S")
+   driver.find_element(By.XPATH, "//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input[@employee Id]").send_keys("12345")
+    driver.find_element(By.LINK_TEXT, "Search").click()
+    Webelement edit= driver.find_element(By.XPATH, "//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[9]/div/button[1]/i")
+    edit.click()
+     driver.find_element(By.XPATH, "By.XPATH, "//*[@id="app"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[2]/button[@Driver's Licence Number").send_keys("XXXXXXX")
+     driver.find_element(By.LINK_TEXT, "Save").click()
+     return driver
+
+mydriver = launch_browser()
+
+
+
+5. Delete an existing employee in the PIM module.
+
+from selenium import webdriver
+from selenium import select
+from selenium.common import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
+# driver = webdriver.Chrome(ChromeDriverManager().install())
+def launch_browser():
+   driver = webdriver.Chrome(executable_path="C:/chromedriver.exe")
+   driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+   time.sleep(15)
+
+   driver.find_element(By.NAME, "username").send_keys("Admin")
+   driver.find_element(By.NAME, "password").send_keys("admin123")
+   driver.find_element(By.XPATH, "//div/input[@name='username']").send_keys("Admin")
+   driver.find_element(By.NAME, "firstname").send_keys("SSSS")
+   driver.find_element(By.NAME, "middlename").send_keys("Flower")
+   driver.find_element(By.NAME, "lastname").send_keys("S")
+   driver.find_element(By.XPATH, "//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input[@employee Id]").send_keys("12345")
+    driver.find_element(By.LINK_TEXT, "Search").click()
+    Webelement delete = driver.find_element(By.XPATH, "//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[9]/div/button[1]/i")
+    delete.click()
+   Webelement delete1 = driver.find_element(By.XPATH, "//*[@id="app"]/div[3]/div/div/div/div[3]/button[2]")
+    delete1.click()
+    return driver
+
+mydriver = launch_browser()
